@@ -28,7 +28,7 @@ public class CriarListaDeTarefasESalvarEmArquivo {
 		}
 
 		Path arquivo = Paths.get(
-				"C:\\Users\\Iury Kozielski\\git\\repository\\CursoLogicaOrientadaAObjetos\\CursoLogicaCapitulo10\\exercicio01.txt");
+				"C:\\Users\\Iury Kozielski\\git\\repository\\CursoLogicaOrientadaAObjetos\\CursoLogicaCapitulo10\\tarefas.txt");
 
 		Files.write(arquivo, listaDeTarefas);
 
