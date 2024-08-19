@@ -9,5 +9,6 @@
 	<classpathentry kind="lib" path="libs/commons-email-1.4.jar"/>
 	<classpathentry kind="lib" path="libs/javax.mail.jar"/>
 	<classpathentry kind="lib" path="libs/javax.activation-1.2.0.jar"/>
+	<classpathentry kind="lib" path="libs/iury-console-1.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
