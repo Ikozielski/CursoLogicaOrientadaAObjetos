@@ -4,10 +4,12 @@ import java.util.ArrayList;
 import java.util.UUID;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.service.annotation.DeleteExchange;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
@@ -77,11 +79,18 @@ public class ContatosControle {
 		return "redirect:/contatos";
 	}
 	
+	@DeleteMapping("/contatos/{id}")
+	public String remover(@PathVariable String id) {
+		Contato contato = procurarContato(id);
+		
+		LISTA_CONTATOS.remove(contato);
+		return "redirect:/contatos";
+	}
+	
 	// -------------------------------------------------------------- Métodos Auxiliares
 	
 	
 	private Contato procurarContato(String id) {
-		
 		for(int i = 0; i < LISTA_CONTATOS.size(); i++) {
 			Contato contato = LISTA_CONTATOS.get(i);
 			
